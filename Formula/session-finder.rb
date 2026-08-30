@@ -5,21 +5,21 @@
 class SessionFinder < Formula
   desc "Search local AI sessions from multiple tools"
   homepage "https://github.com/BayInl/session-finder"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/BayInl/session-finder/releases/download/v0.1.0/session-finder_0.1.0_darwin_amd64.tar.gz"
-      sha256 "dd7008dc42a10348f045eca4937afa4da76bfeac89d33cd463b0d72e0d3e9279"
+      url "https://github.com/BayInl/session-finder/releases/download/v0.2.0/session-finder_0.2.0_darwin_amd64.tar.gz"
+      sha256 "7f26c5755ee2e472d02681355e822725d1c81408b99427483a67fa228b3ee002"
 
       define_method(:install) do
         bin.install "session-finder"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/BayInl/session-finder/releases/download/v0.1.0/session-finder_0.1.0_darwin_arm64.tar.gz"
-      sha256 "4427659c730aaf83fbafb3a082a81a1bcd81e4152dbb5aff9f9cc58a852503e7"
+      url "https://github.com/BayInl/session-finder/releases/download/v0.2.0/session-finder_0.2.0_darwin_arm64.tar.gz"
+      sha256 "02518abf6b58b94882cfc5d49b508a3cb766c46517bffa27b5e0bf55c13beb8a"
 
       define_method(:install) do
         bin.install "session-finder"
@@ -29,8 +29,8 @@ class SessionFinder < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/BayInl/session-finder/releases/download/v0.1.0/session-finder_0.1.0_linux_amd64.tar.gz"
-      sha256 "8e0d6ae0658b26f9bc45721bad62ced69ff3cb3dba5ae0e2f4271bf86872fb6a"
+      url "https://github.com/BayInl/session-finder/releases/download/v0.2.0/session-finder_0.2.0_linux_amd64.tar.gz"
+      sha256 "f7dee044d826a98fb21914bd21d753e9cb04fbc8426399bd2978ba1c66feded0"
       define_method(:install) do
         bin.install "session-finder"
       end
