@@ -5,39 +5,39 @@
 class SessionFinder < Formula
   desc "Search local AI sessions from multiple tools"
   homepage "https://github.com/BayInl/session-finder"
-  version "0.3.1"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/BayInl/session-finder/releases/download/v0.3.1/session-finder_0.3.1_darwin_amd64.tar.gz"
-      sha256 "408a6559c2f3e5e3d66debcf177e489875c00d2228bccf9d777640ca2d554cdc"
+      url "https://github.com/BayInl/session-finder/releases/download/v0.4.0/session-finder_0.4.0_darwin_amd64.tar.gz"
+      sha256 "6652e522a85074f9d85f7513314234213e54b7032668153b5d728d69fa4625f2"
 
       define_method(:install) do
-        bin.install "session-finder"
+        bin.install "sfind"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/BayInl/session-finder/releases/download/v0.3.1/session-finder_0.3.1_darwin_arm64.tar.gz"
-      sha256 "c9036a649f65385911717d41601b47966026cb502f637ab05751b25ac2b137ed"
+      url "https://github.com/BayInl/session-finder/releases/download/v0.4.0/session-finder_0.4.0_darwin_arm64.tar.gz"
+      sha256 "1183c2c8872b62117c946aecb973058223a282936ce5bb063af8ce228d21931c"
 
       define_method(:install) do
-        bin.install "session-finder"
+        bin.install "sfind"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/BayInl/session-finder/releases/download/v0.3.1/session-finder_0.3.1_linux_amd64.tar.gz"
-      sha256 "9fdf8afff1e4f1ff916bff7addbf8048652c19af96f22c43a82a9bf872ee9e77"
+      url "https://github.com/BayInl/session-finder/releases/download/v0.4.0/session-finder_0.4.0_linux_amd64.tar.gz"
+      sha256 "ddfc49e8a04d302b7afc55552a46067732bfba3cc68c76f1809e618eb1c65ec6"
       define_method(:install) do
-        bin.install "session-finder"
+        bin.install "sfind"
       end
     end
   end
 
   test do
-    system "#{bin}/session-finder", "--help"
+    system "#{bin}/sfind", "--help"
   end
 end
